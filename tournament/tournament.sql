@@ -1,7 +1,7 @@
 -- Table definitions for the tournament project.
 
 -- Drop the database and all the tables and views in it if they already exists
-DROP DATABASE tournament;
+DROP DATABASE IF EXISTS tournament;
 CREATE DATABASE tournament;
 
 -- Connect to the tournament database
@@ -9,15 +9,15 @@ CREATE DATABASE tournament;
 
 -- Table to hold the player data
 CREATE TABLE players (
-     id    serial PRIMARY KEY,
-     name   text NOT NULL
+     id    SERIAL PRIMARY KEY,
+     name   TEXT NOT NULL
 );
 
 -- Table to hold the match data
 CREATE TABLE matches (
-     id       serial PRIMARY KEY,
-     winner   int references players(id),
-     loser    int references players(id)
+     id       SERIAL PRIMARY KEY,
+     winner   INT references players(id),
+     loser    INT references players(id)
 );
 
 -- View to hold the Standings data formatted as needed

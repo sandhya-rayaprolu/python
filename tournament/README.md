@@ -17,8 +17,10 @@ behaving properly. This file is provided by Udacity
 To Run
 =======
 1. Execute the tournament.sql file to create the database and tables
+   You can run do this from command line using "psql -f tournament.sql"
 2. Execute the tournament_test.py to test whether tournament.py correctly
    adds/deletes players, registers match results, generates player standings
    and pairs up the players with the closest number of wins.
+   You can run the test from command line using "python tournament_test.py"
 
 
